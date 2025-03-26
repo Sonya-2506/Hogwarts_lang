@@ -1,0 +1,106 @@
+
+sl = {'print': 'lumos',
+'for': 'crucio',
+'while': 'legilimens',
+'input': 'nox',
+'max': 'engorgio',
+'min': 'reducio',
+' if': 'imperio',
+'else': 'protego',
+'elif' : 'expelliarmus',
+'def':  'dissendium',
+'import': 'alohamora',
+'break': 'avadakedavra',
+'del': 'obliviate',
+'in range': 'finite incantatem',
+' = ': '🪄',
+' * ': '👻',
+' // ': '⚡️',
+' / ': '📚',
+' % ': '🧹',
+' + ': '🐈‍⬛️',
+' - ': '🕷',
+' == ': '🚂',
+' != ': '🎃',
+' > ': '🦉',
+' < ': '🐸',
+}
+
+sl2 = {'print': 'lumos',
+'for': 'crucio',
+'while': 'legilimens',
+'input': 'nox',
+'max': 'engorgio',
+'min': 'reducio',
+' if': 'imperio',
+'else': 'protego',
+'elif' : 'expelliarmus',
+'def':  'dissendium',
+'import': 'alohamora',
+'break': 'avadakedavra',
+'del': 'obliviate',
+'in range': 'finite incantatem',
+' = ': 'рџЄ„',
+' * ': 'рџ‘»',
+' // ': 'вљЎпёЏ',
+' / ': 'рџ“љ',
+' % ': 'рџ§№',
+' + ': 'рџђ€вЂЌв¬›пёЏ',
+' - ': 'рџ•·',
+' == ': 'рџљ‚',
+' != ': 'рџЋѓ',
+' > ': 'рџ¦‰',
+' < ': 'рџђё',
+}
+
+def convert_to_python(s):
+    global sl
+    f = 0
+    for key, value in sl.items():
+        if key in s:
+            print("Name '" + key + "' is not defined")
+            f = 1
+            break
+        s = s.replace(value, key)
+
+    if f == 0:
+        exec(s)
+
+def convert_to_python2(s):
+    global sl
+    f = 0
+    for key, value in sl2.items():
+        if key in s:
+            print("Name '" + key + "' is not defined")
+            f = 1
+            break
+        s = s.replace(value, key)
+
+    if f == 0:
+        exec(s)        
+
+def convert_to_mylang(s):
+    global sl
+    f = 0
+    for key, value in sl.items():
+        s = s.replace(key, value)
+    return s
+
+def open_file(x):
+    with open(x, 'r') as f:
+        s = f.read()
+    return s
+
+x = input("Вы хотите запустить код из txt файла или ввести его в командную строку?(Если запуск из файла, введите имя файла, а если вы будете вводить код самостоятельно, введите 'code' перед первой строкой кода и 0 после последней)")
+if x == 'code':
+    m1 = []
+    s1 = ''
+    while s1 != '0':
+        s1 = input()
+        if s1 != '0':
+            m1.append(s1 + '\n')
+    s = ''.join(m1)
+    convert_to_python(s)
+else:
+    s = open_file(x)
+    convert_to_python2(s)
