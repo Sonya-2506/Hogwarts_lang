@@ -44,13 +44,8 @@ a < b  —  a 🐸 b  # a меньше b
 иначе - protego
 # Пример
 imperio a 🐸 b :
-
-    lumos('a 🐸 b')
-    
+    lumos('a 🐸 b')  
 expelliarmus a 🦉 b :
-
     lumos('a 🦉 b')
-    
 protego
-
     lumos('a 🚂 b')
