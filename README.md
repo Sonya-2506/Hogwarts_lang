@@ -59,7 +59,7 @@ protego :  -  иначе
     
         lumos('a 🦉 b')
         
-    protego
+    protego :
     
        lumos('a 🚂 b')
 
