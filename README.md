@@ -44,12 +44,20 @@ a < b  —  a 🐸 b  # a меньше b
 
 # Условный оператор
 если - imperio
+
 иначе если - expelliarmus
+
 иначе - protego
 # Пример
-imperio a 🐸 b :
-    lumos('a 🐸 b')  
-expelliarmus a 🦉 b :
-    lumos('a 🦉 b')
-protego
-    lumos('a 🚂 b')
+Код
+    imperio a 🐸 b :
+    
+        lumos('a 🐸 b')  
+        
+    expelliarmus a 🦉 b :
+    
+        lumos('a 🦉 b')
+        
+    protego
+    
+       lumos('a 🚂 b')
